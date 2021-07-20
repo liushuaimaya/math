@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Image, message } from "antd";
 import formula from "./formula.jpeg";
 import { calc } from "./util";
@@ -15,6 +15,11 @@ const tailLayout = {
 };
 
 function App() {
+  useEffect(() => {
+    document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
+      passive: false,
+    });
+  }, []);
   const [res, setRes] = useState<number | undefined>(undefined);
   const [params, setParams] = useState<{ u: string | undefined; m: string | undefined }>({
     u: undefined,
@@ -68,11 +73,9 @@ function App() {
             onChange={(e) => setParams((prev) => ({ ...prev, u: e.target.value }))}
           />
         </Form.Item>
-        {res && (
-          <Form.Item label="计算结果: ">
-            <div className="result">{res}</div>
-          </Form.Item>
-        )}
+        <Form.Item label="计算结果: ">
+          <div className="result">{res}</div>
+        </Form.Item>
         <Form.Item labelAlign="right" {...tailLayout}>
           <Button className="btn" htmlType="reset" onClick={handleReset}>
             重置

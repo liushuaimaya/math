@@ -1,14 +1,13 @@
 .App {
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 20px;
   width: 350px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  -webkit-overflow-scrolling: touch;
 }
 
 .result {
-  font-size: 2em;
-  line-height: 32px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .btn {
