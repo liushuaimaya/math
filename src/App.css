@@ -1,6 +1,7 @@
 .App {
+  margin: 0 auto;
   padding-top: 50px;
-  width: 400px;
+  width: 350px;
   overflow: hidden;
 }
 
@@ -11,7 +12,7 @@
 }
 
 .btn {
-  width: 122px;
+  width: 105px;
 }
 
 .btn:first-of-type {
