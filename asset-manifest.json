@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/math/static/css/main.1fde1fa7.chunk.css",
+    "main.css": "/math/static/css/main.39e30d72.chunk.css",
     "main.js": "/math/static/js/main.da5c1783.chunk.js",
     "main.js.map": "/math/static/js/main.da5c1783.chunk.js.map",
     "runtime-main.js": "/math/static/js/runtime-main.a2400a69.js",
@@ -12,7 +12,7 @@
     "static/js/3.16a9b8c1.chunk.js.map": "/math/static/js/3.16a9b8c1.chunk.js.map",
     "index.html": "/math/index.html",
     "static/css/2.7572b43f.chunk.css.map": "/math/static/css/2.7572b43f.chunk.css.map",
-    "static/css/main.1fde1fa7.chunk.css.map": "/math/static/css/main.1fde1fa7.chunk.css.map",
+    "static/css/main.39e30d72.chunk.css.map": "/math/static/css/main.39e30d72.chunk.css.map",
     "static/js/2.3a0624fd.chunk.js.LICENSE.txt": "/math/static/js/2.3a0624fd.chunk.js.LICENSE.txt",
     "static/media/formula.1b863f5a.jpeg": "/math/static/media/formula.1b863f5a.jpeg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.a2400a69.js",
     "static/css/2.7572b43f.chunk.css",
     "static/js/2.3a0624fd.chunk.js",
-    "static/css/main.1fde1fa7.chunk.css",
+    "static/css/main.39e30d72.chunk.css",
     "static/js/main.da5c1783.chunk.js"
   ]
 }
