@@ -1,6 +1,7 @@
 .App {
-  margin-top: 50px;
-  width: 500px;
+  padding-top: 50px;
+  width: 400px;
+  overflow: hidden;
 }
 
 .result {
@@ -10,7 +11,7 @@
 }
 
 .btn {
-  width: 156px;
+  width: 122px;
 }
 
 .btn:first-of-type {
