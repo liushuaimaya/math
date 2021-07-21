@@ -1,15 +1,17 @@
+import Big from "big.js";
+
 const factorial = (n: number) => {
-  let total = 1;
+  let total = Big(1);
   for (let i = 0; i < n; i++) {
-    total *= n - i;
+    total = total.times(n - i);
   }
   return total;
 };
 
 const calcRightDenominator = (m: number, u: number) => {
-  let res = 0;
+  let res = Big(0);
   for (let k = 0; k <= m - 1; k++) {
-    res += u ** k / factorial(k);
+    res = res.add(Big(u).pow(k).div(factorial(k)));
   }
   return res;
 };
@@ -17,10 +19,14 @@ const calcRightDenominator = (m: number, u: number) => {
 const calc = (m: number, u: number) => {
   const p = u / m;
   /** 分子 */
-  const molecular = u ** m / factorial(m);
+  const molecular = Big(u).pow(m).div(factorial(m));
   /** 分母 */
-  const denominator = molecular + (1 - p) * calcRightDenominator(m, u);
-  return molecular / denominator;
+  const denominator = molecular.add(calcRightDenominator(m, u)).times(1 - p);
+  const result = molecular.div(denominator);
+  console.log("u ** m / m!", molecular);
+  console.log("u ** m / m! + (1 - p) * ∈(m-1, k=0)u ** k / k!", denominator);
+  console.log("result", result);
+  return result;
 };
 
 export { calc };

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button, Image, message } from "antd";
+import Big from "big.js";
 import formula from "./formula.jpeg";
 import { calc } from "./util";
 import "./App.css";
@@ -20,37 +21,19 @@ function App() {
       passive: false,
     });
   }, []);
-  const [res, setRes] = useState<number | undefined>(undefined);
-  const [params, setParams] = useState<{ u: string | undefined; m: string | undefined }>({
-    u: undefined,
-    m: undefined,
+  const [res, setRes] = useState("");
+  const [params, setParams] = useState({
+    u: "",
+    m: "",
   });
   const onFinish = () => {
-    if (isNaN(Number(params.m))) {
-      message.error(`${params.m} is not number`);
-      setRes(undefined);
-      return;
-    }
-    if (isNaN(Number(params.u))) {
-      message.error(`${params.u} is not number`);
-      setRes(undefined);
-      return;
-    }
-
     const res = calc(Number(params.m), Number(params.u));
-
-    if (isNaN(res)) {
-      message.error(`参数错误`);
-      setRes(undefined);
-      return;
-    }
-
-    setRes(res);
+    setRes(res.toString());
   };
 
   const handleReset = () => {
-    setParams({ u: undefined, m: undefined });
-    setRes(undefined);
+    setParams({ u: "", m: "" });
+    setRes("");
   };
 
   return (
