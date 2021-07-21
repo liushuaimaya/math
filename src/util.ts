@@ -23,9 +23,9 @@ const calc = (m: number, u: number) => {
   /** 分母 */
   const denominator = molecular.add(calcRightDenominator(m, u)).times(1 - p);
   const result = molecular.div(denominator);
-  console.log("u ** m / m!", molecular);
-  console.log("u ** m / m! + (1 - p) * ∈(m-1, k=0)u ** k / k!", denominator);
-  console.log("result", result);
+  console.log("u ** m / m!", molecular.toString());
+  console.log("u ** m / m! + (1 - p) * ∈(m-1, k=0)u ** k / k!", denominator.toString());
+  console.log("result", result.toString());
   return result;
 };
 
